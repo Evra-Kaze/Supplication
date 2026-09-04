@@ -1,0 +1,45 @@
+# wifi-opn.conf
+Network={ 
+    ssid="SSID_NAME"
+    key_mgmt=NONE 
+    scan_ssid=1 
+}
+
+# wifi-owe.conf
+Network={
+    ssid="SSID_NAME"
+    key_mgmt=OWE
+}
+
+# wifi-wep.conf
+Network={
+    ssid="SSID_NAME"
+    key_mgmt=NONE
+    wep_key0=PASSWORD
+    wep_tx_keyidx=0   
+}
+
+# wifi-psk.conf
+Network={
+    ssid="SSID_NAME"
+    psk="PASSWORD"
+}
+
+# wifi-sae.conf
+network={
+    ssid="SSID_NAME"
+    psk="PASSWORD"
+    key_mgmt=SAE
+    ieee80211w=2
+}
+
+# wifi-mgt.conf
+network={
+    ssid="SSID_NAME"
+    key_mgmt=WPA-EAP
+    eap=PEAP
+    anonymous_identity="anonymous"
+    identity="USERNAME"
+    password="PASSWORD"
+    phase2="auth=MSCHAPV2"
+}
