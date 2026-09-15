@@ -11,6 +11,15 @@ Network={
     key_mgmt=OWE
 }
 
+network={
+    ssid="wifi-gratis"
+    key_mgmt=OWE
+    proto=RSN
+    pairwise=CCMP
+    group=CCMP
+    ieee80211w=2
+}
+
 # wifi-wep.conf
 Network={
     ssid="SSID_NAME"

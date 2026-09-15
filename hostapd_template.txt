@@ -1,0 +1,92 @@
+### For OPN.conf
+
+interface=wlan0
+driver=nl80211
+hw_mode=g
+channel=6
+ssid=OpenNetwork
+wpa=0
+# MAC Filter
+#macaddr_acl=1
+#accept_mac_file=/root/open/acceptMac.txt
+ap_isolate=1
+
+
+
+
+### For OWE.conf
+
+interface=wlan0
+driver=nl80211
+ssid=MyOWENetwork
+hw_mode=g
+channel=6
+ieee80211w=1
+wpa=2
+wpa_key_mgmt=OWE
+rsn_pairwise=CCMP
+
+
+### For WEP.conf
+
+interface=wlan0
+driver=nl80211
+#ignore_broadcast_ssid=2
+hw_mode=g
+channel=1
+ssid=wifi-old
+auth_algs=1
+wep_default_key=0
+wep_key0=1122334455
+
+
+### For PSK.conf
+
+interface=wlan0
+driver=nl80211
+hw_mode=g
+channel=6
+ssid=wifi-mobile
+wpa=2
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP CCMP
+wpa_passphrase=passwordPSK
+
+
+### For SAE.conf
+
+interface=wlan0
+ctrl_interface=/var/run/hostapd
+ssid=wifi-management
+hw_mode=g
+channel=11
+wmm_enabled=1
+wpa=2
+wpa_passphrase=passwordSAE
+wpa_key_mgmt=SAE
+ieee80211w=2
+
+
+### For MTG.conf
+
+interface=wlan0
+ssid=wifi-corp
+channel=44
+hw_mode=a
+country_code=ES
+ieee8021x=1
+ieee80211d=1
+wpa=2
+wpa_key_mgmt=WPA-EAP
+wpa_pairwise=CCMP
+rsn_pairwise=CCMP
+eap_server=1
+eapol_key_index_workaround=0
+own_ip_addr=127.0.0.1
+eap_user_file=/root/mgt/hostapd_wpe.eap_user
+ca_cert=/root/mgt/certs/ca.crt
+server_cert=/root/mgt/certs/server.crt
+private_key=/root/mgt/certs/server.key
+private_key_passwd=whatever
+
+
